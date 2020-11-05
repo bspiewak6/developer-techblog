@@ -1,0 +1,26 @@
+{
+  "name": "developer-techblog",
+  "version": "1.0.0",
+  "description": "tech blog for developers to share thoughts and ideas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bspiewak6/developer-techblog.git"
+  },
+  "author": "Brian Spiewak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bspiewak6/developer-techblog/issues"
+  },
+  "homepage": "https://github.com/bspiewak6/developer-techblog#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}
