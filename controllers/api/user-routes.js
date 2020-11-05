@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {
-<<<<<<< HEAD
   User.findOne({
     attributes: { exclude: ['password'] },
     where: {
@@ -37,13 +36,6 @@ router.get('/:id', (req, res) => {
         }
       },
     ]
-=======
-    User.findOne({
-      attributes: { exclude: ['password'] },
-      where: {
-        id: req.params.id
-    }
->>>>>>> c12e240b644156bac738b232309da10a7697caf9
   })
       .then(dbUserData => {
         if (!dbUserData) {
