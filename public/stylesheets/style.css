@@ -15,6 +15,7 @@
     color: black;
     font-weight: bold;
     transition: color .1s;
+    padding: 10px;
   }
   
   a:hover {
@@ -90,10 +91,9 @@
   header h2 {
     background-color: lightslategrey;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px;
     border-radius: 5px;
-
   }
   
   main {
@@ -107,7 +107,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: black;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;

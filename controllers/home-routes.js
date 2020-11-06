@@ -2,11 +2,12 @@
 // homepage and login page
 
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+// const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
-// route to render the homepage
+// route to render the homepage with all posts
 router.get('/', (req, res) => {
+  console.log(req.session);
     Post.findAll({
       attributes: [
         'id',
@@ -33,7 +34,10 @@ router.get('/', (req, res) => {
         // pass a single post object into the homepage template
         // loop over and map each Sequelize object saving the results in a new posts array
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('homepage', { posts });
+        res.render('homepage', { 
+          posts,
+          loggedIn: req.session.loggedIn
+         });
       })
       .catch(err => {
         console.log(err);
@@ -43,6 +47,11 @@ router.get('/', (req, res) => {
 
 // route to render the login and signup page
 router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
   res.render('login');
 });
 
