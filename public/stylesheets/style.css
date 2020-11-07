@@ -28,7 +28,7 @@
     padding: 1%;
     color: white;
     font-weight: bold;
-    transition: background-color .1s;
+    transition: .1s;
     cursor: pointer;
     border-radius: 5px;
   }
