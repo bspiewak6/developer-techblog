@@ -1,4 +1,4 @@
-<ol class="post-list">
+{{!-- <ol class="post-list">
     {{#each posts as |post|}}
   <li>
     <article class="post">
@@ -14,4 +14,18 @@
     </article>
   </li>
   {{/each}}
-</ol>
+</ol> --}}
+
+{{#each posts as |post|}}
+  <div class="card">
+    <div class="card-header">
+        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
+        <span>({{post_url}})</span>
+    <div class="card-body">
+      Posted by {{user.username}} on {{created_at}} 
+      |
+      <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+    </div>
+    </div>
+  </div>
+{{/each}}
