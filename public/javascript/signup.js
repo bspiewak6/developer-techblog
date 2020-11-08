@@ -16,6 +16,7 @@ async function signupFormHandler(event) {
     // check the response status -- add error handling with .ok property
         if (response.ok) {
             console.log('success');
+            document.location.replace('/login')
         } else {
             alert(response.statusText);
         }

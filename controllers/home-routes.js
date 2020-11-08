@@ -45,22 +45,7 @@ router.get('/', (req, res) => {
       });
 });
 
-// route to render signup page
-router.get('/signup', (req, res) => {
-    res.render('signup');
-    return;
-});
 
-
-// route to render the login page
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('login');
-});
 
 
 // route to render the single post page
@@ -90,25 +75,41 @@ router.get('/post/:id', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
-        return;
-      }
-
-      // serialize the data
-      const post = dbPostData.get({ plain: true });
-
-      // pass data to template
-      res.render('single-post', { 
-        post,
-        loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+  .then(dbPostData => {
+    if (!dbPostData) {
+      res.status(404).json({ message: 'No post found with this id' });
+      return;
+    }
+    
+    // serialize the data
+    const post = dbPostData.get({ plain: true });
+    
+    // pass data to template
+    res.render('single-post', { 
+      post,
+      loggedIn: req.session.loggedIn
     });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+// route to render the login page
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  
+  res.render('login');
+});
+
+// route to render signup page
+router.get('/signup', (req, res) => {
+    res.render('signup');
+    return;
 });
 
 module.exports = router;
