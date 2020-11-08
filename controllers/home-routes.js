@@ -45,7 +45,14 @@ router.get('/', (req, res) => {
       });
 });
 
-// route to render the login and signup page
+// route to render signup page
+router.get('/signup', (req, res) => {
+    res.render('signup');
+    return;
+});
+
+
+// route to render the login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -54,6 +61,7 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
 
 // route to render the single post page
 router.get('/post/:id', (req, res) => {
@@ -102,6 +110,5 @@ router.get('/post/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;

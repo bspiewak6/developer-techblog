@@ -65,7 +65,7 @@ router.get('/:id', (req, res) => {
 });
 
 // create a post
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     Post.create({
       title: req.body.title,
       post_content: req.body.post_content,
@@ -80,7 +80,7 @@ router.post('/', withAuth, (req, res) => {
 
 // update a post
 router.put('/:id', (req, res) => {
-    Post.update(req.body,
+    Post.update(
       {
         title: req.body.title
       },
