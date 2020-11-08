@@ -45,7 +45,8 @@ router.get('/', withAuth, (req, res) => {
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
+      id: req.params.id
     },
     attributes: [
       'id',
