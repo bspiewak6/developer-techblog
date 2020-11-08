@@ -36,10 +36,6 @@
   button:hover {
     background-color: black;
   }
-
-  #btn-signup {
-    color: white;
-  }
   
   .post-list {
     margin: 0;
