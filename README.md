@@ -30,7 +30,7 @@ Developers Everywhere was designed for all developers to post about new applicat
 ![Screenshots](./assets/images/screenshot_dashboard.png)
 
 ## Requirements
-1. Create a CMS-style blog site that allows user to sign up and post comments
+1. Create a CMS-style blog site that allows the user to sign up and post comments
 2. When the user visits the site, they are presented with the homepage that shows all posts
 3. If the user decides to sign up and login, they can then write their own posts and comment on other users posts.
 4. When the user logs in, they see their posts they created in the dashboard
