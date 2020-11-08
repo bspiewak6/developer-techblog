@@ -1,5 +1,5 @@
 <section>
-  <h2>Create New Post</h2>
+  <h3>Create A New Post</h3>
 
   <form class="new-post-form">
     <div>
@@ -14,10 +14,10 @@
   </form>
 </section>
 
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
+{{!-- {{#if posts.length}}
+<section class="user-post">
+  <h3>Your Blog Posts</h3>
+  <ol></ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
@@ -25,6 +25,16 @@
     </li>
     {{/each}}
   </ol>
+</section>
+{{/if}} --}}
+
+{{#if posts.length}}
+<section class="user-post">
+  <h3>Your Blog Posts</h3>
+    {{#each posts as |post|}}
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    {{/each}}
 </section>
 {{/if}}
 
