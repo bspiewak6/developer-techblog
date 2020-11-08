@@ -2,7 +2,7 @@
 ![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
 
 ## Description
-Developers Everywhere was designed for all developers to post to post about new applications, debugging codebases and also sharing insights on their own apps or other topics in the development world
+Developers Everywhere was designed for all developers to post about new applications, debugging codebases and also sharing insights on their own apps or other topics in the development world
 
 ## Table of Contents
 * [Technologies](#technologies)
