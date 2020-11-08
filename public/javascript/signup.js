@@ -13,7 +13,6 @@ async function signupFormHandler(event) {
         }),
         headers: { 'Content-Type': 'application/json' }
     });
-    // check the response status -- add error handling with .ok property
         if (response.ok) {
             console.log('success');
             document.location.replace('/login')
