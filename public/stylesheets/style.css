@@ -36,6 +36,10 @@
   button:hover {
     background-color: black;
   }
+
+  #btn-signup {
+    color: white;
+  }
   
   .post-list {
     margin: 0;
@@ -68,8 +72,7 @@
   
   .wrapper {
     width: 100%;
-    /* min-height: 100%;
-    max-width: 1200px; */
+    min-height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
